@@ -1,0 +1,17 @@
+D:\Micro-Service\aspnetcore-microservice\src\Services\Ordering\Ordering.Domain\bin\Debug\net6.0\Ordering.Domain.deps.json
+D:\Micro-Service\aspnetcore-microservice\src\Services\Ordering\Ordering.Domain\bin\Debug\net6.0\Ordering.Domain.dll
+D:\Micro-Service\aspnetcore-microservice\src\Services\Ordering\Ordering.Domain\bin\Debug\net6.0\Ordering.Domain.pdb
+D:\Micro-Service\aspnetcore-microservice\src\Services\Ordering\Ordering.Domain\obj\Debug\net6.0\Ordering.Domain.csproj.AssemblyReference.cache
+D:\Micro-Service\aspnetcore-microservice\src\Services\Ordering\Ordering.Domain\obj\Debug\net6.0\Ordering.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Micro-Service\aspnetcore-microservice\src\Services\Ordering\Ordering.Domain\obj\Debug\net6.0\Ordering.Domain.AssemblyInfoInputs.cache
+D:\Micro-Service\aspnetcore-microservice\src\Services\Ordering\Ordering.Domain\obj\Debug\net6.0\Ordering.Domain.AssemblyInfo.cs
+D:\Micro-Service\aspnetcore-microservice\src\Services\Ordering\Ordering.Domain\obj\Debug\net6.0\Ordering.Domain.csproj.CoreCompileInputs.cache
+D:\Micro-Service\aspnetcore-microservice\src\Services\Ordering\Ordering.Domain\obj\Debug\net6.0\Ordering.Domain.dll
+D:\Micro-Service\aspnetcore-microservice\src\Services\Ordering\Ordering.Domain\obj\Debug\net6.0\refint\Ordering.Domain.dll
+D:\Micro-Service\aspnetcore-microservice\src\Services\Ordering\Ordering.Domain\obj\Debug\net6.0\Ordering.Domain.pdb
+D:\Micro-Service\aspnetcore-microservice\src\Services\Ordering\Ordering.Domain\obj\Debug\net6.0\ref\Ordering.Domain.dll
+D:\Micro-Service\aspnetcore-microservice\src\Services\Ordering\Ordering.Domain\bin\Debug\net6.0\Contracts.dll
+D:\Micro-Service\aspnetcore-microservice\src\Services\Ordering\Ordering.Domain\bin\Debug\net6.0\Contracts.pdb
+D:\Micro-Service\aspnetcore-microservice\src\Services\Ordering\Ordering.Domain\obj\Debug\net6.0\Ordering.Domain.csproj.CopyComplete
+D:\Micro-Service\aspnetcore-microservice\src\Services\Ordering\Ordering.Domain\bin\Debug\net6.0\Shared.dll
+D:\Micro-Service\aspnetcore-microservice\src\Services\Ordering\Ordering.Domain\bin\Debug\net6.0\Shared.pdb

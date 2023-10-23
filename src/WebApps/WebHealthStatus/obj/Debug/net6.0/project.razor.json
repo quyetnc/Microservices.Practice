@@ -1,0 +1,56 @@
+{
+  "SerializedFilePath": "d:\\Micro-Service\\aspnetcore-microservice\\src\\WebApps\\WebHealthStatus\\obj\\Debug\\net6.0\\project.razor.json",
+  "FilePath": "d:\\Micro-Service\\aspnetcore-microservice\\src\\WebApps\\WebHealthStatus\\WebHealthStatus.csproj",
+  "Configuration": {
+    "ConfigurationName": "MVC-3.0",
+    "LanguageVersion": "6.0",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-3.0"
+      }
+    ]
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 1000
+  },
+  "RootNamespace": "WebHealthStatus",
+  "Documents": [
+    {
+      "FilePath": "d:\\Micro-Service\\aspnetcore-microservice\\src\\WebApps\\WebHealthStatus\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Micro-Service\\aspnetcore-microservice\\src\\WebApps\\WebHealthStatus\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Micro-Service\\aspnetcore-microservice\\src\\WebApps\\WebHealthStatus\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Micro-Service\\aspnetcore-microservice\\src\\WebApps\\WebHealthStatus\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Micro-Service\\aspnetcore-microservice\\src\\WebApps\\WebHealthStatus\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Micro-Service\\aspnetcore-microservice\\src\\WebApps\\WebHealthStatus\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Micro-Service\\aspnetcore-microservice\\src\\WebApps\\WebHealthStatus\\Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    }
+  ],
+  "SerializationFormat": "0.3"
+}
