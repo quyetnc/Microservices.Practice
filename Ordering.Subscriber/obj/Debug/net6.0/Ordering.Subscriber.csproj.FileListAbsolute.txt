@@ -1,0 +1,17 @@
+D:\Micro-Service\aspnetcore-microservice\Ordering.Subscriber\bin\Debug\net6.0\Ordering.Subscriber.exe
+D:\Micro-Service\aspnetcore-microservice\Ordering.Subscriber\bin\Debug\net6.0\Ordering.Subscriber.deps.json
+D:\Micro-Service\aspnetcore-microservice\Ordering.Subscriber\bin\Debug\net6.0\Ordering.Subscriber.runtimeconfig.json
+D:\Micro-Service\aspnetcore-microservice\Ordering.Subscriber\bin\Debug\net6.0\Ordering.Subscriber.dll
+D:\Micro-Service\aspnetcore-microservice\Ordering.Subscriber\bin\Debug\net6.0\Ordering.Subscriber.pdb
+D:\Micro-Service\aspnetcore-microservice\Ordering.Subscriber\bin\Debug\net6.0\RabbitMQ.Client.dll
+D:\Micro-Service\aspnetcore-microservice\Ordering.Subscriber\obj\Debug\net6.0\Ordering.Subscriber.csproj.AssemblyReference.cache
+D:\Micro-Service\aspnetcore-microservice\Ordering.Subscriber\obj\Debug\net6.0\Ordering.Subscriber.GeneratedMSBuildEditorConfig.editorconfig
+D:\Micro-Service\aspnetcore-microservice\Ordering.Subscriber\obj\Debug\net6.0\Ordering.Subscriber.AssemblyInfoInputs.cache
+D:\Micro-Service\aspnetcore-microservice\Ordering.Subscriber\obj\Debug\net6.0\Ordering.Subscriber.AssemblyInfo.cs
+D:\Micro-Service\aspnetcore-microservice\Ordering.Subscriber\obj\Debug\net6.0\Ordering.Subscriber.csproj.CoreCompileInputs.cache
+D:\Micro-Service\aspnetcore-microservice\Ordering.Subscriber\obj\Debug\net6.0\Ordering.Subscriber.csproj.CopyComplete
+D:\Micro-Service\aspnetcore-microservice\Ordering.Subscriber\obj\Debug\net6.0\Ordering.Subscriber.dll
+D:\Micro-Service\aspnetcore-microservice\Ordering.Subscriber\obj\Debug\net6.0\refint\Ordering.Subscriber.dll
+D:\Micro-Service\aspnetcore-microservice\Ordering.Subscriber\obj\Debug\net6.0\Ordering.Subscriber.pdb
+D:\Micro-Service\aspnetcore-microservice\Ordering.Subscriber\obj\Debug\net6.0\Ordering.Subscriber.genruntimeconfig.cache
+D:\Micro-Service\aspnetcore-microservice\Ordering.Subscriber\obj\Debug\net6.0\ref\Ordering.Subscriber.dll
