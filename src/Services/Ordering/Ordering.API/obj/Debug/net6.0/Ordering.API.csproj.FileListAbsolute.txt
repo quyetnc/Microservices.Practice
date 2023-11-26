@@ -115,3 +115,7 @@ D:\Micro-Service\aspnetcore-microservice\src\Services\Ordering\Ordering.API\bin\
 D:\Micro-Service\aspnetcore-microservice\src\Services\Ordering\Ordering.API\bin\Debug\net6.0\EventBus.Messages.dll
 D:\Micro-Service\aspnetcore-microservice\src\Services\Ordering\Ordering.API\bin\Debug\net6.0\EventBus.Messages.pdb
 D:\Micro-Service\aspnetcore-microservice\src\Services\Ordering\Ordering.API\bin\Debug\net6.0\RabbitMQ.Client.dll
+D:\Micro-Service\aspnetcore-microservice\src\Services\Ordering\Ordering.API\bin\Debug\net6.0\MassTransit.dll
+D:\Micro-Service\aspnetcore-microservice\src\Services\Ordering\Ordering.API\bin\Debug\net6.0\MassTransit.Abstractions.dll
+D:\Micro-Service\aspnetcore-microservice\src\Services\Ordering\Ordering.API\bin\Debug\net6.0\MassTransit.RabbitMqTransport.dll
+D:\Micro-Service\aspnetcore-microservice\src\Services\Ordering\Ordering.API\bin\Debug\net6.0\System.Text.Json.dll
