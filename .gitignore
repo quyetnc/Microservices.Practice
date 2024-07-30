@@ -13,9 +13,37 @@
 x64/
 [Bb]in/
 [Oo]bj/
-# MSTest test Results For All Sources Microservice
+# Ignore all bin and obj directories recursively
 **/bin/
 **/obj/
+
+src/BuildingBlocks/Common.Logging/bin
+src/BuildingBlocks/Common.Logging/obj
+
+src/BuildingBlocks/Contracts/bin
+src/BuildingBlocks/Contracts/obj
+
+src/Services/Customer.API/bin
+src/Services/Customer.API/obj
+
+
+src/Services/Basket.API/bin
+src/Services/Basket.API/obj
+
+
+src/Services/Hangfire.API/bin
+src/Services/Hangfire.API/obj
+
+
+src/Services/Inventory.API/bin
+src/Services/Inventory.API/obj
+
+src/Services/Ordering/bin
+src/Services/Ordering/obj
+
+
+src/Services/Product.API/bin
+src/Services/Product.API/obj
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
