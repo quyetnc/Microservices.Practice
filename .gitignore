@@ -17,57 +17,57 @@ x64/
 **/bin/
 **/obj/
 
-src/ApiGateways/OcelotApiGw/bin/
-src/ApiGateways/OcelotApiGw/obj/
+/src/ApiGateways/OcelotApiGw/bin
+/src/ApiGateways/OcelotApiGw/obj
 
 
-src/BuildingBlocks/Common.Logging/bin/
-src/BuildingBlocks/Common.Logging/obj/
+/src/BuildingBlocks/Common.Logging/bin
+/src/BuildingBlocks/Common.Logging/obj
 
-src/BuildingBlocks/EventBus/EventBus.Messages/bin/
-src/BuildingBlocks/EventBus/EventBus.Messages/obj/
+/src/BuildingBlocks/EventBus/EventBus.Messages/bin
+/src/BuildingBlocks/EventBus/EventBus.Messages/obj
 
-src/BuildingBlocks/Contracts/bin/
-src/BuildingBlocks/Contracts/obj/
+/src/BuildingBlocks/Contracts/bin
+/src/BuildingBlocks/Contracts/obj
 
-src/BuildingBlocks/Infrastructure/bin/
-src/BuildingBlocks/Infrastructure/obj/
+/src/BuildingBlocks/Infrastructure/bin
+/src/BuildingBlocks/Infrastructure/obj
 
-src/BuildingBlocks/Shared/bin/
-src/BuildingBlocks/Shared/obj/
+/src/BuildingBlocks/Shared/bin
+/src/BuildingBlocks/Shared/obj
 
-src/Services/Customer.API/bin/
-src/Services/Customer.API/obj/
-
-
-src/Services/Basket.API/bin/
-src/Services/Basket.API/obj/
+/src/Services/Customer.API/bin
+/src/Services/Customer.API/obj
 
 
-src/Services/Hangfire.API/bin/
-src/Services/Hangfire.API/obj/
+/src/Services/Basket.API/bin
+/src/Services/Basket.API/obj
 
 
-src/Services/Inventory.API/bin/
-src/Services/Inventory.API/obj/
+/src/Services/Hangfire.API/bin
+/src/Services/Hangfire.API/obj
 
-src/Services/Ordering/Ordering.API/bin/
-src/Services/Ordering/Ordering.API/obj/
 
-src/Services/Ordering/Ordering.Application/bin/
-src/Services/Ordering/Ordering.Application/obj/
+/src/Services/Inventory.API/bin
+/src/Services/Inventory.API/obj
 
-src/Services/Ordering/Ordering.Domain/bin/
-src/Services/Ordering/Ordering.Domain/obj/
+/src/Services/Ordering/Ordering.API/bin
+/src/Services/Ordering/Ordering.API/obj
 
-src/Services/Ordering/Ordering.Infrastructure/bin/
-src/Services/Ordering/Ordering.Infrastructure/obj/
+/src/Services/Ordering/Ordering.Application/bin
+/src/Services/Ordering/Ordering.Application/obj
 
-src/Services/Ordering/Ordering.Subscriber/bin/
-src/Services/Ordering/Ordering.Subscriber/obj/
+/src/Services/Ordering/Ordering.Domain/bin
+/src/Services/Ordering/Ordering.Domain/obj
 
-src/Services/Product.API/bin/
-src/Services/Product.API/obj/
+/src/Services/Ordering/Ordering.Infrastructure/bin
+/src/Services/Ordering/Ordering.Infrastructure/obj
+
+/src/Services/Ordering/Ordering.Subscriber/bin
+/src/Services/Ordering/Ordering.Subscriber/obj
+
+/src/Services/Product.API/bin
+/src/Services/Product.API/obj
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
