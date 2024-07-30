@@ -9,6 +9,7 @@
       "Ordering.API/1.0.0": {
         "dependencies": {
           "Common.Logging": "1.0.0",
+          "EventBus.Messages": "1.0.0",
           "MassTransit.RabbitMQ": "8.0.5",
           "Microsoft.EntityFrameworkCore.Design": "6.0.6",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.6",

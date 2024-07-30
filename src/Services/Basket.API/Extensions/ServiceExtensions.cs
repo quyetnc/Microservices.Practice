@@ -27,7 +27,7 @@ public static class ServiceExtensions
     }
     public static IServiceCollection ConfiguretServices ( this IServiceCollection services ) =>
         services.AddScoped<IBasketRepository, BasketRepository>()
-        .AddTransient<ISerializeService, SerializerService>();
+        .AddTransient<ISerializeService, SerializeService>();
 
     public static void ConfigureRedis ( this IServiceCollection services, IConfiguration configuration )
     {

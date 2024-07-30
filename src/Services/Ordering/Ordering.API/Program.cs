@@ -25,7 +25,7 @@ try
     builder.Services.AddInfrastructureServices(builder.Configuration);
     builder.Services.AddApplicationServices();
     builder.Services.AddScoped<IMessageProducer, RabbitMQProducer>();
-    builder.Services.AddScoped<ISerializeService, SerializerService>();
+    builder.Services.AddScoped<ISerializeService, SerializeService>();
     builder.Services.Configure<RouteOptions>(options => options.LowercaseUrls = true);
     builder.Services.ConfigureMassTransit();
     builder.Services.AddControllers();

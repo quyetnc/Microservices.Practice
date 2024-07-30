@@ -3659,8 +3659,8 @@
     },
     "EventBus.Messages/1.0.0": {
       "type": "project",
-      "path": "../../../BuildingBlocks/EventBus.Messages/EventBus.Messages.csproj",
-      "msbuildProject": "../../../BuildingBlocks/EventBus.Messages/EventBus.Messages.csproj"
+      "path": "../../../BuildingBlocks/EventBus/EventBus.Messages/EventBus.Messages.csproj",
+      "msbuildProject": "../../../BuildingBlocks/EventBus/EventBus.Messages/EventBus.Messages.csproj"
     },
     "Infrastructure/1.0.0": {
       "type": "project",

@@ -32,7 +32,7 @@ public class OrdersDomainHandler :
 
         try
         {
-            _emailService.SendEmailAsync(emailRequest, cancellationToken);
+            //_emailService.SendEmailAsync(emailRequest, cancellationToken);
             _logger.Information($"Sent Created Order to email {notification.EmailAddress}");
         }
         catch (Exception ex)

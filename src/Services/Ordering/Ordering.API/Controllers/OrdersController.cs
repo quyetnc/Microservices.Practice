@@ -31,15 +31,15 @@ namespace Ordering.API.Controllers
             _messageProducer = messageProducer;
         }
 
-        //private static class RouteNames
-        //{
-        //    public const string GetOrders = nameof(GetOrders);
-        //    public const string GetOrder = nameof(GetOrder);
-        //    public const string CreateOrder = nameof(CreateOrder);
-        //    public const string UpdateOrder = nameof(UpdateOrder);
-        //    public const string DeleteOrder = nameof(DeleteOrder);
-        //    public const string DeleteOrderByDocumentNo = nameof(DeleteOrderByDocumentNo);
-        //}
+        private static class RouteNames
+        {
+            public const string GetOrders = nameof(GetOrders);
+            public const string GetOrder = nameof(GetOrder);
+            public const string CreateOrder = nameof(CreateOrder);
+            public const string UpdateOrder = nameof(UpdateOrder);
+            public const string DeleteOrder = nameof(DeleteOrder);
+            public const string DeleteOrderByDocumentNo = nameof(DeleteOrderByDocumentNo);
+        }
         [HttpGet("{username}")]
         //Name = RouteNames.GetOrders
         [ProducesResponseType(typeof(IEnumerable<OrderDto>), (int)HttpStatusCode.OK)]
@@ -87,14 +87,14 @@ namespace Ordering.API.Controllers
         //    return Ok(result);
         //}
 
-        //[HttpDelete("{id:long}", Name = RouteNames.DeleteOrder)]
-        //[ProducesResponseType(typeof(NoContentResult), (int)HttpStatusCode.NoContent)]
-        //public async Task<ActionResult> DeleteOrder ( [Required] long id )
-        //{
-        //    var command = new DeleteOrderCommand(id);
-        //    await _mediator.Send(command);
-        //    return NoContent();
-        //}
+        [HttpDelete("{id:long}", Name = RouteNames.DeleteOrder)]
+        [ProducesResponseType(typeof(NoContentResult), (int)HttpStatusCode.NoContent)]
+        public async Task<ActionResult> DeleteOrder ( [Required] long id )
+        {
+            var command = new DeleteOrderCommand(id);
+            await _mediator.Send(command);
+            return NoContent();
+        }
 
         //[HttpDelete("document-no/{documentNo}", Name = RouteNames.DeleteOrderByDocumentNo)]
         //[ProducesResponseType(typeof(ApiResult<bool>), (int)HttpStatusCode.NoContent)]

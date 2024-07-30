@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Micro-Service\\aspnetcore-microservice\\src\\BuildingBlocks\\EventBus.Messages\\EventBus.Messages.csproj": {}
+    "D:\\Micro-Service\\aspnetcore-microservice\\src\\BuildingBlocks\\EventBus\\EventBus.Messages\\EventBus.Messages.csproj": {}
   },
   "projects": {
-    "D:\\Micro-Service\\aspnetcore-microservice\\src\\BuildingBlocks\\EventBus.Messages\\EventBus.Messages.csproj": {
+    "D:\\Micro-Service\\aspnetcore-microservice\\src\\BuildingBlocks\\EventBus\\EventBus.Messages\\EventBus.Messages.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Micro-Service\\aspnetcore-microservice\\src\\BuildingBlocks\\EventBus.Messages\\EventBus.Messages.csproj",
+        "projectUniqueName": "D:\\Micro-Service\\aspnetcore-microservice\\src\\BuildingBlocks\\EventBus\\EventBus.Messages\\EventBus.Messages.csproj",
         "projectName": "EventBus.Messages",
-        "projectPath": "D:\\Micro-Service\\aspnetcore-microservice\\src\\BuildingBlocks\\EventBus.Messages\\EventBus.Messages.csproj",
+        "projectPath": "D:\\Micro-Service\\aspnetcore-microservice\\src\\BuildingBlocks\\EventBus\\EventBus.Messages\\EventBus.Messages.csproj",
         "packagesPath": "C:\\Users\\QuyetNC\\.nuget\\packages\\",
-        "outputPath": "D:\\Micro-Service\\aspnetcore-microservice\\src\\BuildingBlocks\\EventBus.Messages\\obj\\",
+        "outputPath": "D:\\Micro-Service\\aspnetcore-microservice\\src\\BuildingBlocks\\EventBus\\EventBus.Messages\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\QuyetNC\\AppData\\Roaming\\NuGet\\NuGet.Config",
