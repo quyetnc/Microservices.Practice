@@ -2,6 +2,7 @@
 using Inventory.Product.API.Services;
 using Inventory.Product.API.Services.Interfaces;
 using MongoDB.Driver;
+using Shared.Configurations;
 
 namespace Inventory.Product.API.Extensions
 {

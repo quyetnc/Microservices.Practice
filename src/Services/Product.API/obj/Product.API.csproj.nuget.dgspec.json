@@ -123,7 +123,7 @@
             },
             "MongoDB.Driver": {
               "target": "Package",
-              "version": "[2.17.1, )"
+              "version": "[2.28.0, )"
             }
           },
           "imports": [
@@ -195,10 +195,6 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[11.0.1, )"
-            },
-            "MongoDB.Driver": {
-              "target": "Package",
-              "version": "[2.28.0, )"
             },
             "NETCore.MailKit": {
               "target": "Package",

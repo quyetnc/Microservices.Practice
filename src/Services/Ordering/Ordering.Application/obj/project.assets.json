@@ -1118,7 +1118,7 @@
         "dependencies": {
           "MediatR": "10.0.1",
           "Microsoft.EntityFrameworkCore": "6.0.6",
-          "MongoDB.Driver": "2.17.1",
+          "MongoDB.Driver": "2.28.0",
           "Shared": "1.0.0"
         },
         "compile": {
@@ -1145,7 +1145,6 @@
           "AutoMapper": "11.0.1",
           "Common.Logging": "1.0.0",
           "Contracts": "1.0.0",
-          "MongoDB.Driver": "2.28.0",
           "NETCore.MailKit": "2.1.0",
           "Newtonsoft.Json": "13.0.3",
           "RabbitMQ.Client": "6.4.0",
