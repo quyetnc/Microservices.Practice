@@ -16,5 +16,4 @@ public class MetaData
     public bool HasNext => CurrentPage < TotalPages;
     public int FirstRowOnPage => TotalItems > 0 ? (CurrentPage - 1) * PageSize + 1 : 0;
     public int LastRowOnPage => (int)Math.Min(CurrentPage * PageSize, TotalItems);
-
 }
