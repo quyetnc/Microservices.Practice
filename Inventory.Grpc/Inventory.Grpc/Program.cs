@@ -14,8 +14,8 @@ try
 
     // Add services to the container.
     builder.Services.AddConfigurationSettings(builder.Configuration);
-    builder.Services.ConfigureMongoDbClient();
     builder.Services.AddInfrastructureServices();
+    builder.Services.ConfigureMongoDbClient();
 
     builder.Services.AddGrpc();
 
@@ -25,6 +25,7 @@ try
     app.MapGet("/", ( ) => "Communication with gRPC endpoints must be made through a gRPC client. To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909");
 
     app.Run();
+    //MigrateDatabase().
 
 }
 catch (Exception ex)
@@ -37,4 +38,6 @@ finally
     Log.Information("Shut down Inventory gRPC complete");
     Log.CloseAndFlush();
 }
+
+
 

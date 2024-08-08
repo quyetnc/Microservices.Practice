@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Basket.API.Entities;
+using Basket.API.GrpcServices;
 using Basket.API.Repositories;
 using Basket.API.Repositories.Interfaces;
 using EventBus.Messages.IntegrationEvents.Events;
@@ -19,13 +20,15 @@ namespace Basket.API.Controllers
         private readonly IBasketRepository _basketRepository;
         private readonly IMapper _mapper;
         private readonly IPublishEndpoint _publishEndpoint;
+        private readonly StockItemGrpcService _stockItemGrpcService;
 
-        public BasketsController ( IBasketRepository basketRepository, IMapper mapper = null, IPublishEndpoint publishEndpoint = null )
+        public BasketsController ( IBasketRepository basketRepository, IMapper mapper = null, IPublishEndpoint publishEndpoint = null, StockItemGrpcService stockItemGrpcService = null )
         {
             _basketRepository = basketRepository ?? throw new ArgumentNullException(nameof(basketRepository));
             _publishEndpoint = publishEndpoint ?? throw new ArgumentNullException(nameof(publishEndpoint));
             //_stockItemGrpcService = stockItemGrpcService ?? throw new ArgumentNullException(nameof(stockItemGrpcService));
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
+            _stockItemGrpcService = stockItemGrpcService ?? throw new ArgumentNullException(nameof(stockItemGrpcService));
         }
         [HttpGet("{username}", Name = "GetBasket")]
         [ProducesResponseType(typeof(Cart), (int)HttpStatusCode.OK)]
@@ -39,6 +42,13 @@ namespace Basket.API.Controllers
         [ProducesResponseType(typeof(Cart), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<Cart>> UpdateBasket ( [FromBody] Cart cart )
         {
+            //Communicate with Inventory.Grpc and check quantity avaiable of products
+            foreach (var item in cart.Items)
+            {
+                var stock = await _stockItemGrpcService.GetStock(item.ItemNo);
+                item.SetAvailableQuantity(stock.Quantity);
+            }
+
             var options = new DistributedCacheEntryOptions()
                 .SetAbsoluteExpiration(DateTime.UtcNow.AddHours(1))
                 .SetSlidingExpiration(TimeSpan.FromMinutes(5));

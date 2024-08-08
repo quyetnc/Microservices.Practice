@@ -3,6 +3,9 @@ using Inventory.Grpc.Repositories.Interfaces;
 using Inventory.Grpc.Repositories;
 using MongoDB.Driver;
 using Shared.Configurations;
+using Inventory.Grpc.Entities;
+using Shared.Enums.Inventory;
+
 namespace Inventory.Grpc.Extensions
 {
     public static class ServiceExtensions
@@ -38,6 +41,53 @@ namespace Inventory.Grpc.Extensions
         public static void AddInfrastructureServices ( this IServiceCollection services )
         {
             services.AddScoped<IInventoryRepository, InventoryRepository>();
+        }
+
+        public static IHost MigrateDatabase ( this IHost host )
+        {
+            using var scope = host.Services.CreateScope();
+            var services = scope.ServiceProvider;
+            var settings = services.GetService<MongoDbSettings>();
+            if (settings == null || string.IsNullOrEmpty(settings.ConnectionString))
+                throw new ArgumentNullException("DatabaseSettings is not configured");
+
+            var mongoClient = services.GetRequiredService<IMongoClient>();
+            new InventoryDbSeed()
+                .SeedDataAsync(mongoClient, settings)
+                .Wait();
+            return host;
+        }
+
+        public class InventoryDbSeed
+        {
+            public async Task SeedDataAsync ( IMongoClient mongoClient, MongoDbSettings settings )
+            {
+                var databaseName = settings.DatabaseName;
+                var database = mongoClient.GetDatabase(databaseName);
+                var inventoryCollection = database.GetCollection<InventoryEntry>("InventoryEntries");
+                
+                if (await inventoryCollection.EstimatedDocumentCountAsync() == 0)
+                {
+                    await inventoryCollection.InsertManyAsync(GetPreconfiguredInventories());
+                }
+            }
+
+            private IEnumerable<InventoryEntry> GetPreconfiguredInventories ( )
+            {
+                return new List<InventoryEntry>
+        {
+            new()
+            {
+                Quantity = 10,
+                ItemNo = "Lotus"
+            },
+            new()
+            {
+                ItemNo = "Cadillac",
+                Quantity = 10
+            },
+        };
+            }
         }
     }
 }
