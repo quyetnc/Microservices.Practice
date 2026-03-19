@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
@@ -66,7 +66,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Domain", "src\Serv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Infrastructure", "src\Services\Ordering\Ordering.Infrastructure\Ordering.Infrastructure.csproj", "{5FCD35BA-441E-45E8-92B4-367F89FD9228}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Subscriber", "Ordering.Subscriber\Ordering.Subscriber.csproj", "{FAE6DC61-59E2-4DF2-BDC0-56226F3314CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Subscriber", "src\Services\Ordering\Ordering.Subscriber\Ordering.Subscriber.csproj", "{FAE6DC61-59E2-4DF2-BDC0-56226F3314CE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventBus", "EventBus", "{6A060C58-82B2-42DC-AF8B-E2D4393A5A61}"
 EndProject
