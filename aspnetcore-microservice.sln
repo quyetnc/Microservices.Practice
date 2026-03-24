@@ -1,7 +1,6 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.3.32929.385
+# Visual Studio Version 18
+VisualStudioVersion = 18.4.11612.150
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F286A3B5-8D38-475E-AD64-EEB62964C5B0}"
 	ProjectSection(SolutionItems) = preProject
@@ -71,6 +70,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventBus", "EventBus", "{6A060C58-82B2-42DC-AF8B-E2D4393A5A61}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.Messages", "src\BuildingBlocks\EventBus\EventBus.Messages\EventBus.Messages.csproj", "{E7BE1D78-87EA-4F27-A385-214826F388C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Grpc", "src\Services\Inventory.Grpc\Inventory.Grpc.csproj", "{C076CB06-85E5-DF41-9455-BB0F2C416D8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -180,6 +181,12 @@ Global
 		{E7BE1D78-87EA-4F27-A385-214826F388C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7BE1D78-87EA-4F27-A385-214826F388C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7BE1D78-87EA-4F27-A385-214826F388C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C076CB06-85E5-DF41-9455-BB0F2C416D8D}.Build All|Any CPU.ActiveCfg = Release|Any CPU
+		{C076CB06-85E5-DF41-9455-BB0F2C416D8D}.Build All|Any CPU.Build.0 = Release|Any CPU
+		{C076CB06-85E5-DF41-9455-BB0F2C416D8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C076CB06-85E5-DF41-9455-BB0F2C416D8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C076CB06-85E5-DF41-9455-BB0F2C416D8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C076CB06-85E5-DF41-9455-BB0F2C416D8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -213,6 +220,7 @@ Global
 		{FAE6DC61-59E2-4DF2-BDC0-56226F3314CE} = {7BDCB099-8C8B-4A62-9451-705E0F45DA65}
 		{6A060C58-82B2-42DC-AF8B-E2D4393A5A61} = {75092169-D067-40DC-8F35-D70947A06606}
 		{E7BE1D78-87EA-4F27-A385-214826F388C8} = {6A060C58-82B2-42DC-AF8B-E2D4393A5A61}
+		{C076CB06-85E5-DF41-9455-BB0F2C416D8D} = {471C0C27-8A3B-495E-BE6E-8F19C339B9EB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AC174929-27C6-4376-B85A-2EAB31368F83}
