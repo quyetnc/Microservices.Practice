@@ -1,4 +1,7 @@
-﻿namespace OcelotApiGw.Extensions;
+﻿using Common.Logging;
+using Serilog;
+
+namespace OcelotApiGw.Extensions;
 
 public static class HostExtensions
 {
@@ -12,8 +15,9 @@ public static class HostExtensions
             //.AddEnvironmentVariables();
 
             config.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-           .AddJsonFile($"appsetings.{env.EnvironmentName}.json", optional: true)
+           .AddJsonFile($"appsetings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true)
+           .AddJsonFile($"ocelot.{env.EnvironmentName}.json", optional: false, reloadOnChange: true)
            .AddEnvironmentVariables();
-        });
+        }).UseSerilog(Serilogger.Configure);
     }
 }
