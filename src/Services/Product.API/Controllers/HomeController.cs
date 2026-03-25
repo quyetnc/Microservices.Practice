@@ -4,7 +4,7 @@ namespace Product.API.Controllers
 {
     public class HomeController : ControllerBase
     {
-        public IActionResult Index ( )
+        public IActionResult Index()
         {
             return Redirect("~/swagger");
         }

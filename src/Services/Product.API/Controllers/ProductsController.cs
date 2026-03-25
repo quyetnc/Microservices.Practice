@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Contracts.Common.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Product.API.Entities;
@@ -40,8 +41,12 @@ namespace Product.API.Controllers
             return Ok(result);
         }
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> CreateProduct ( [FromBody] CreateProductDto productDto )
         {
+            var productEntity = _repository.GetProductByNo(productDto.No);
+            if (productEntity != null) return BadRequest($"Product No: {productDto.No} is existed.");
+
             var product = _mapper.Map<CatalogProduct>(productDto);
             await _repository.CreateAsync(product);
             await _repository.SaveChangesAsync();
@@ -49,6 +54,7 @@ namespace Product.API.Controllers
             return Ok(result);
         }
         [HttpPut("{id:long}")]
+        [Authorize]
         public async Task<IActionResult> UpdateProduct ( [Required] long id, [FromBody] UpdateProductDto productDto )
         {
             var product = await _repository.GetProduct(id);
@@ -62,6 +68,7 @@ namespace Product.API.Controllers
             return Ok(result);
         }
         [HttpDelete("{id:long}")]
+        [Authorize]
         public async Task<IActionResult> DeleteProduct ( [Required] long id )
         {
             var product = await _repository.GetProduct(id);

@@ -1,18 +1,25 @@
-﻿using MySqlConnector;
-using Product.API.Persistence;
-using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+﻿using Contracts.Common.Interfaces;
+using Contracts.Identity;
+using Infrastructure.Common;
+using Infrastructure.Extensions;
+using Infrastructure.Identity;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using Contracts.Common.Interfaces;
-using Infrastructure.Common;
-using Product.API.Repositories.Interfaces;
+using Microsoft.IdentityModel.Tokens;
+using MySqlConnector;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+using Product.API.Persistence;
 using Product.API.Repositories;
+using Product.API.Repositories.Interfaces;
+using Shared.Configurations;
+using System.Text;
 
 namespace Product.API.Extensions
 {
     public static class ServiceExtensions
     {
-        public static IServiceCollection AddInfrastructure ( this IServiceCollection services, IConfiguration configuration )
+        public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddControllers();
             services.Configure<RouteOptions>(options => options.LowercaseUrls = true);
@@ -22,10 +29,11 @@ namespace Product.API.Extensions
             services.ConfigureProductDbContext(configuration);
             services.AddInfrastructureServices();
             services.AddAutoMapper(cfg => cfg.AddProfile(new MappingProfile()));
+            services.AddJwtAuthentication();
             return services;
         }
 
-        private static IServiceCollection ConfigureProductDbContext ( this IServiceCollection services, IConfiguration configuration )
+        private static IServiceCollection ConfigureProductDbContext(this IServiceCollection services, IConfiguration configuration)
         {
             var connectionString = configuration.GetConnectionString("DefaultConnectionString");
 
@@ -45,7 +53,45 @@ namespace Product.API.Extensions
         {
             return services.AddScoped(typeof(IRepositoryBaseAsync<,,>), typeof(RepositoryBase<,,>))
                 .AddScoped(typeof(IUnitOfWork<>), typeof(UnitOfWork<>))
-                .AddScoped<IProductRepository, ProductRepository>();
+                .AddScoped<IProductRepository, ProductRepository>() ;
+        }
+
+        internal static IServiceCollection AddConfigurationSettings(this IServiceCollection services, IConfiguration configuration)
+        {
+            var jwtSettings = configuration.GetSection(nameof(JwtSettings)).Get<JwtSettings>();
+            services.AddSingleton(jwtSettings);
+            return services;
+        }
+
+        internal static IServiceCollection AddJwtAuthentication(this IServiceCollection services)
+        {
+            var settings = services.GetOptions<JwtSettings>(nameof(JwtSettings));
+            if (settings == null || string.IsNullOrEmpty(settings.Key))
+                throw new ArgumentNullException($"{nameof(JwtSettings)} is not configured properly");
+
+            var signingKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(settings.Key));
+
+            var tokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = signingKey,
+                ValidateIssuer = false,
+                ValidateAudience = false,
+                ValidateLifetime = true,
+                ClockSkew = TimeSpan.Zero,
+                RefreshBeforeValidation = false,
+            };
+            services.AddAuthentication(o =>
+            {
+                o.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                o.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(x =>
+            {
+                x.SaveToken = true;
+                x.RequireHttpsMetadata = false;
+                x.TokenValidationParameters = tokenValidationParameters;
+            });
+            return services;
         }
     }
 }

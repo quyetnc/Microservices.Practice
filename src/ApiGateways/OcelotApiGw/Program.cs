@@ -34,10 +34,20 @@ try
     app.UseCors("CorsPolicy");
 
     app.UseMiddleware<ErrorWrappingMiddleware>();
-
+    app.UseAuthentication();
+    app.UseRouting();
     //app.UseHttpsRedirection();
 
     app.UseAuthorization();
+
+    app.UseEndpoints(endpoints =>
+    {
+        endpoints.MapGet("/",
+            async context =>
+            {
+                await context.Response.WriteAsync($"Hello NCQ! This is {builder.Environment.ApplicationName}");
+            });
+    });
 
     app.MapControllers();
 
