@@ -6,7 +6,9 @@
     //Customer API http://localhost:5003/api/customers
     {
       "UpstreamPathTemplate": "/customers/{username}",
-      "UpstreamHttpMethod": [ "Get" ],
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
       "DownstreamPathTemplate": "/api/customers/{username}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -20,7 +22,20 @@
     {
       "UpstreamPathTemplate": "/products/{id}",
       "UpstreamHttpMethod": [
-        "GET",
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/products/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/products/{id}",
+      "UpstreamHttpMethod": [
         "PUT",
         "DELETE"
       ],
@@ -31,7 +46,14 @@
           "Host": "localhost",
           "Port": 5002
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin"
+      }
     },
     {
       "UpstreamPathTemplate": "/products",
@@ -46,7 +68,23 @@
           "Host": "localhost",
           "Port": 5002
         }
-      ]
+      ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        // the client in this array will not be affected by the rate limiting
+        "EnableRateLimiting": true,
+        "Period": "2s",
+        // 1s, 5m, 1h, 1d
+        "PeriodTimespan": 1,
+        // retry after a certain number of seconds
+        "Limit": 1
+        // the maximum number of requests that a client can make in a defined period.
+      },
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 2, // If the service does n't respond successfully for 2 times, the circuit will be opened and the next requests will be rejected immediately without calling the service.
+        "DurationOfBreak": 1000, // The duration (in milliseconds) for which the circuit will remain open before it attempts to reset and allow requests through again.
+        "TimeoutValue": 5000 // If the service throws a second exception, the service will not be assessed for 5 seconds, and the next requests will be rejected immediately without calling the service.
+      }
     },
     {
       "UpstreamPathTemplate": "/products/get-product-by-no/{productNo}",
